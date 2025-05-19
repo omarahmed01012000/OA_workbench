@@ -33,4 +33,4 @@ jobs:
 
       # Run the main.py script
       - name: Run main.py to validate
-        run: python main.py
+        run: python main.py --test
