@@ -1,0 +1,19 @@
+name: Python Script Check
+
+on:
+  push:
+    branches: ["*"]         # Run on every push to any branch
+  pull_request:
+    branches: [main]        # Also run on PRs targeting 'main'
+
+jobs:
+  run-script:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run main.py to validate
+        run: python main.py
+ 
